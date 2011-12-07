@@ -125,7 +125,7 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "spec/support/configuration.rb"
   ]
-  s.homepage = "https://ryanmoran@github.com/RevolutionPrep/morpheus.git"
+  s.homepage = "https://github.com/RevolutionPrep/morpheus"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"

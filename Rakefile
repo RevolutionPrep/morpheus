@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name        = "morpheus"
-  gem.homepage    = "https://ryanmoran@github.com/RevolutionPrep/morpheus.git"
+  gem.homepage    = "https://github.com/RevolutionPrep/morpheus"
   gem.license     = "MIT"
   gem.summary     = %Q{RESTful API Client}
   gem.description = %Q{RESTful API Client}
