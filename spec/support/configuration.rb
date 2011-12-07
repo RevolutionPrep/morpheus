@@ -4,7 +4,7 @@ Morpheus::Configuration.allow_net_connect = false
 
 module MorpheusHelper
   
-  def build_polaris_response(status, content, errors = nil)
+  def build_morpheus_response(status, content, errors = nil)
     body = {
       :status  => status,
       :content => content

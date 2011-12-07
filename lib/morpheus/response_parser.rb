@@ -11,7 +11,7 @@ module Morpheus
     def self.parse(owner, request, metadata)
       parser = new(owner, request, metadata)
 
-      ActiveSupport::Notifications.instrument('request.polaris_resource', :url => request.url, :params => request.params, :method => request.method, :class => owner, :response => request.response) do
+      ActiveSupport::Notifications.instrument('request.morpheus', :url => request.url, :params => request.params, :method => request.method, :class => owner, :response => request.response) do
         @parsed_response = parser.parse
       end
       RequestCache.cache.clear unless request.method == :get

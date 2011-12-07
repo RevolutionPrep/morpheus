@@ -77,7 +77,7 @@ describe Morpheus::Persistence, "#save" do
   end
   
   def stub_web!
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states").and_return(build_morpheus_response(
       201,
       {
         :id      => 1,
@@ -89,7 +89,7 @@ describe Morpheus::Persistence, "#save" do
       }
     ))
     
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states/1").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states/1").and_return(build_morpheus_response(
       200,
       {
         :id      => 1,
@@ -133,7 +133,7 @@ describe Morpheus::Persistence, "#update_attributes" do
   end
   
   def stub_web!
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states").and_return(build_morpheus_response(
       201,
       {
         :id      => 1,
@@ -145,7 +145,7 @@ describe Morpheus::Persistence, "#update_attributes" do
       }
     ))
     
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states/1").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/states/1").and_return(build_morpheus_response(
       200,
       {
         :id      => 1,

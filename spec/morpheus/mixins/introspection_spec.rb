@@ -53,7 +53,7 @@ describe Morpheus::Introspection, ".persisted?" do
   end
   
   def stub_web!
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/attendees").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/attendees").and_return(build_morpheus_response(
       201,
       {
         :id      => 1,
@@ -93,7 +93,7 @@ describe Morpheus::Introspection, ".new_record?" do
   end
   
   def stub_web!
-    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/attendees").and_return(build_polaris_response(
+    Morpheus::Configuration.hydra.stub(:post, "#{Morpheus::Configuration.host}/attendees").and_return(build_morpheus_response(
       201,
       {
         :id      => 1,

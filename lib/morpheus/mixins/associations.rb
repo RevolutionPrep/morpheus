@@ -1,9 +1,9 @@
 module Morpheus
   module Associations
-    autoload :Association,          'polaris_resource/associations/association'
-    autoload :BelongsToAssociation, 'polaris_resource/associations/belongs_to_association'
-    autoload :HasManyAssociation,   'polaris_resource/associations/has_many_association'
-    autoload :HasOneAssociation,    'polaris_resource/associations/has_one_association'
+    autoload :Association,          'morpheus/associations/association'
+    autoload :BelongsToAssociation, 'morpheus/associations/belongs_to_association'
+    autoload :HasManyAssociation,   'morpheus/associations/has_many_association'
+    autoload :HasOneAssociation,    'morpheus/associations/has_one_association'
 
     extend ActiveSupport::Concern
 
