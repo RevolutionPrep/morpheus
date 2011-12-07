@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "polaris_resource"
+  s.name = "morpheus"
   s.version = "0.3.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ryan Moran"]
   s.date = "2011-12-07"
   s.description = "RESTful API Client"
-  s.email = "ryan.moran@gmail.com"
+  s.email = "ryan.moran@revolutionprep.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -26,6 +26,40 @@ Gem::Specification.new do |s|
     "VERSION",
     "autotest/discover.rb",
     "lib/ext/typhoeus.rb",
+    "lib/morpheus.rb",
+    "lib/morpheus/associations/association.rb",
+    "lib/morpheus/associations/belongs_to_association.rb",
+    "lib/morpheus/associations/has_many_association.rb",
+    "lib/morpheus/associations/has_one_association.rb",
+    "lib/morpheus/base.rb",
+    "lib/morpheus/client/associations.rb",
+    "lib/morpheus/client/inflections.rb",
+    "lib/morpheus/client/log_subscriber.rb",
+    "lib/morpheus/client/railtie.rb",
+    "lib/morpheus/configuration.rb",
+    "lib/morpheus/errors.rb",
+    "lib/morpheus/filter.rb",
+    "lib/morpheus/mixins/associations.rb",
+    "lib/morpheus/mixins/attributes.rb",
+    "lib/morpheus/mixins/conversion.rb",
+    "lib/morpheus/mixins/filtering.rb",
+    "lib/morpheus/mixins/finders.rb",
+    "lib/morpheus/mixins/introspection.rb",
+    "lib/morpheus/mixins/persistence.rb",
+    "lib/morpheus/mixins/reflections.rb",
+    "lib/morpheus/mixins/request_handling.rb",
+    "lib/morpheus/mixins/response_parsing.rb",
+    "lib/morpheus/mixins/url_support.rb",
+    "lib/morpheus/mock.rb",
+    "lib/morpheus/reflection.rb",
+    "lib/morpheus/relation.rb",
+    "lib/morpheus/request.rb",
+    "lib/morpheus/request_cache.rb",
+    "lib/morpheus/request_queue.rb",
+    "lib/morpheus/response.rb",
+    "lib/morpheus/response_parser.rb",
+    "lib/morpheus/type_caster.rb",
+    "lib/morpheus/url_builder.rb",
     "polaris_resource.gemspec",
     "spec/dummy/Rakefile",
     "spec/dummy/app/controllers/application_controller.rb",
@@ -66,11 +100,32 @@ Gem::Specification.new do |s|
     "spec/dummy/public/favicon.ico",
     "spec/dummy/public/stylesheets/.gitkeep",
     "spec/dummy/script/rails",
+    "spec/morpheus/associations/association_spec.rb",
+    "spec/morpheus/associations/belongs_to_association_spec.rb",
+    "spec/morpheus/associations/has_many_association_spec.rb",
+    "spec/morpheus/associations/has_one_association_spec.rb",
+    "spec/morpheus/base_spec.rb",
+    "spec/morpheus/client/associations_spec.rb",
+    "spec/morpheus/configuration_spec.rb",
+    "spec/morpheus/mixins/associations_spec.rb",
+    "spec/morpheus/mixins/attributes_spec.rb",
+    "spec/morpheus/mixins/conversion_spec.rb",
+    "spec/morpheus/mixins/finders_spec.rb",
+    "spec/morpheus/mixins/introspection_spec.rb",
+    "spec/morpheus/mixins/persistence_spec.rb",
+    "spec/morpheus/mixins/reflection_spec.rb",
+    "spec/morpheus/mixins/response_parsing_spec.rb",
+    "spec/morpheus/mock_spec.rb",
+    "spec/morpheus/relation_spec.rb",
+    "spec/morpheus/request_cache_spec.rb",
+    "spec/morpheus/request_spec.rb",
+    "spec/morpheus/response_spec.rb",
+    "spec/morpheus/type_caster_spec.rb",
     "spec/shared/active_model_lint_test.rb",
     "spec/spec_helper.rb",
     "spec/support/configuration.rb"
   ]
-  s.homepage = "http://github.com/ryanmoran/polaris_resource"
+  s.homepage = "https://ryanmoran@github.com/RevolutionPrep/morpheus.git"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"

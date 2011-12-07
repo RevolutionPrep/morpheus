@@ -14,12 +14,12 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name        = "polaris_resource"
-  gem.homepage    = "http://github.com/ryanmoran/polaris_resource"
+  gem.name        = "morpheus"
+  gem.homepage    = "https://ryanmoran@github.com/RevolutionPrep/morpheus.git"
   gem.license     = "MIT"
   gem.summary     = %Q{RESTful API Client}
   gem.description = %Q{RESTful API Client}
-  gem.email       = "ryan.moran@gmail.com"
+  gem.email       = "ryan.moran@revolutionprep.com"
   gem.authors     = ["Ryan Moran"]
   # dependencies defined in Gemfile
 end
