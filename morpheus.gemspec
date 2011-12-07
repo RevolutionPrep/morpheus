@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path('../lib/morpheus/version', __FILE__)
 
-Gem::Specification.new do |s|
+Gem::Specification.new do |gem|
   gem.authors       = ['Ryan Moran']
   gem.email         = ['ryan.moran@revolutionprep.com']
   gem.description   = %q{RESTful API Client}
