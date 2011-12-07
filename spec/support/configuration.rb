@@ -1,8 +1,8 @@
-PolarisResource::Configuration.host = 'http://localhost:3000'
-PolarisResource::Configuration.hydra = Typhoeus::Hydra.new
-PolarisResource::Configuration.allow_net_connect = false
+Morpheus::Configuration.host = 'http://localhost:3000'
+Morpheus::Configuration.hydra = Typhoeus::Hydra.new
+Morpheus::Configuration.allow_net_connect = false
 
-module PolarisResourceHelper
+module MorpheusHelper
   
   def build_polaris_response(status, content, errors = nil)
     body = {
@@ -10,17 +10,17 @@ module PolarisResourceHelper
       :content => content
     }
     body.merge!(errors) if errors
-    PolarisResource::Response.new(:code => status, :headers => "", :body => body.to_json, :time => 0.3)
+    Morpheus::Response.new(:code => status, :headers => "", :body => body.to_json, :time => 0.3)
   end
   
 end
 
 RSpec.configure do |config|
-  config.include(PolarisResourceHelper)
+  config.include(MorpheusHelper)
   
   config.before(:each) do
-    PolarisResource::Configuration.hydra.clear_stubs
-    PolarisResource::RequestQueue.queue.clear
-    PolarisResource::RequestCache.cache.clear
+    Morpheus::Configuration.hydra.clear_stubs
+    Morpheus::RequestQueue.queue.clear
+    Morpheus::RequestCache.cache.clear
   end
 end

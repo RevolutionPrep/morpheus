@@ -1,2 +1,2 @@
-class Attendee < PolarisResource::Base
+class Attendee < Morpheus::Base
 end

@@ -1,4 +1,4 @@
-class Book < PolarisResource::Base
+class Book < Morpheus::Base
   property :title
   
   belongs_to :author

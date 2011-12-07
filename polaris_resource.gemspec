@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{polaris_resource}
+  s.name = "polaris_resource"
   s.version = "0.3.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{Ryan Moran}]
-  s.date = %q{2011-11-28}
-  s.description = %q{RESTful API Client}
-  s.email = %q{ryan.moran@gmail.com}
+  s.authors = ["Ryan Moran"]
+  s.date = "2011-12-07"
+  s.description = "RESTful API Client"
+  s.email = "ryan.moran@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -26,40 +26,6 @@ Gem::Specification.new do |s|
     "VERSION",
     "autotest/discover.rb",
     "lib/ext/typhoeus.rb",
-    "lib/polaris_client/associations.rb",
-    "lib/polaris_client/inflections.rb",
-    "lib/polaris_client/log_subscriber.rb",
-    "lib/polaris_client/railtie.rb",
-    "lib/polaris_resource.rb",
-    "lib/polaris_resource/associations/association.rb",
-    "lib/polaris_resource/associations/belongs_to_association.rb",
-    "lib/polaris_resource/associations/has_many_association.rb",
-    "lib/polaris_resource/associations/has_one_association.rb",
-    "lib/polaris_resource/base.rb",
-    "lib/polaris_resource/configuration.rb",
-    "lib/polaris_resource/errors.rb",
-    "lib/polaris_resource/filter.rb",
-    "lib/polaris_resource/mixins/associations.rb",
-    "lib/polaris_resource/mixins/attributes.rb",
-    "lib/polaris_resource/mixins/conversion.rb",
-    "lib/polaris_resource/mixins/filtering.rb",
-    "lib/polaris_resource/mixins/finders.rb",
-    "lib/polaris_resource/mixins/introspection.rb",
-    "lib/polaris_resource/mixins/persistence.rb",
-    "lib/polaris_resource/mixins/reflections.rb",
-    "lib/polaris_resource/mixins/request_handling.rb",
-    "lib/polaris_resource/mixins/response_parsing.rb",
-    "lib/polaris_resource/mixins/url_support.rb",
-    "lib/polaris_resource/mock.rb",
-    "lib/polaris_resource/reflection.rb",
-    "lib/polaris_resource/relation.rb",
-    "lib/polaris_resource/request.rb",
-    "lib/polaris_resource/request_cache.rb",
-    "lib/polaris_resource/request_queue.rb",
-    "lib/polaris_resource/response.rb",
-    "lib/polaris_resource/response_parser.rb",
-    "lib/polaris_resource/type_caster.rb",
-    "lib/polaris_resource/url_builder.rb",
     "polaris_resource.gemspec",
     "spec/dummy/Rakefile",
     "spec/dummy/app/controllers/application_controller.rb",
@@ -100,36 +66,15 @@ Gem::Specification.new do |s|
     "spec/dummy/public/favicon.ico",
     "spec/dummy/public/stylesheets/.gitkeep",
     "spec/dummy/script/rails",
-    "spec/polaris_client/associations_spec.rb",
-    "spec/polaris_resource/associations/association_spec.rb",
-    "spec/polaris_resource/associations/belongs_to_association_spec.rb",
-    "spec/polaris_resource/associations/has_many_association_spec.rb",
-    "spec/polaris_resource/associations/has_one_association_spec.rb",
-    "spec/polaris_resource/base_spec.rb",
-    "spec/polaris_resource/configuration_spec.rb",
-    "spec/polaris_resource/mixins/associations_spec.rb",
-    "spec/polaris_resource/mixins/attributes_spec.rb",
-    "spec/polaris_resource/mixins/conversion_spec.rb",
-    "spec/polaris_resource/mixins/finders_spec.rb",
-    "spec/polaris_resource/mixins/introspection_spec.rb",
-    "spec/polaris_resource/mixins/persistence_spec.rb",
-    "spec/polaris_resource/mixins/reflection_spec.rb",
-    "spec/polaris_resource/mixins/response_parsing_spec.rb",
-    "spec/polaris_resource/mock_spec.rb",
-    "spec/polaris_resource/relation_spec.rb",
-    "spec/polaris_resource/request_cache_spec.rb",
-    "spec/polaris_resource/request_spec.rb",
-    "spec/polaris_resource/response_spec.rb",
-    "spec/polaris_resource/type_caster_spec.rb",
     "spec/shared/active_model_lint_test.rb",
     "spec/spec_helper.rb",
     "spec/support/configuration.rb"
   ]
-  s.homepage = %q{http://github.com/ryanmoran/polaris_resource}
-  s.licenses = [%q{MIT}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.6}
-  s.summary = %q{RESTful API Client}
+  s.homepage = "http://github.com/ryanmoran/polaris_resource"
+  s.licenses = ["MIT"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = "1.8.11"
+  s.summary = "RESTful API Client"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

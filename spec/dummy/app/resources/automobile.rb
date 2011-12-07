@@ -1,4 +1,4 @@
-class Automobile < PolarisResource::Base
+class Automobile < Morpheus::Base
   property :bhp
   property :wheels
   property :hybrid

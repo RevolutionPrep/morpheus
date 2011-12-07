@@ -5,7 +5,7 @@ module Typhoeus
       def check_allow_net_connect_with_error_wrapping!(request)
         check_allow_net_connect_without_error_wrapping!(request)
       rescue Typhoeus::Hydra::NetConnectNotAllowedError => ex
-        raise PolarisResource::NetConnectNotAllowedError.new(request), ex.message
+        raise Morpheus::NetConnectNotAllowedError.new(request), ex.message
       end
       private :check_allow_net_connect_with_error_wrapping!
 
@@ -15,7 +15,7 @@ module Typhoeus
     end
 
     def response_from_easy(easy, request)
-      PolarisResource::Response.new(
+      Morpheus::Response.new(
         :code                => easy.response_code,
         :headers             => easy.response_header,
         :body                => easy.response_body,

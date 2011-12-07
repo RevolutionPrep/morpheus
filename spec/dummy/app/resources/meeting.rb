@@ -1,4 +1,4 @@
-class Meeting < PolarisResource::Base
+class Meeting < Morpheus::Base
   property :title
   
   belongs_to :conference

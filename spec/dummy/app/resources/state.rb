@@ -1,4 +1,4 @@
-class State < PolarisResource::Base
+class State < Morpheus::Base
   property :name
   property :capital
   property :motto

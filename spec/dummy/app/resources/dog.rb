@@ -1,4 +1,4 @@
-class Dog < PolarisResource::Base
+class Dog < Morpheus::Base
   property :name
   property :breed
   
