@@ -10,6 +10,8 @@ require 'active_model'
 # The bulk of the library consists of the Base class and its mix-in modules, the request/response wrappers,
 # mocking, configuration, errors, and classes managing associations, reflections, relations, and typecasting.
 module Morpheus
+  autoload :Version, 'morpheus/version'
+
   autoload :Base,           'morpheus/base'
   autoload :Configuration,  'morpheus/configuration'
   autoload :Filter,         'morpheus/filter'
