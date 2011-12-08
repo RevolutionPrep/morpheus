@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = Morpheus::VERSION
 
   gem.add_dependency 'yajl-ruby',     '~> 0.8.2'
-  gem.add_dependency 'typhoeus',      '~> 0.3.3'
+  gem.add_dependency 'typhoeus',      '~> 0.2.4'
   gem.add_dependency 'activemodel',   '~> 3.0.0'
   gem.add_dependency 'activesupport', '~> 3.0.0'
   gem.add_dependency 'i18n',          '~> 0.5.0'
