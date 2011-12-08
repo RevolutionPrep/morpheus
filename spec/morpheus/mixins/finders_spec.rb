@@ -72,7 +72,7 @@ describe Morpheus::Finders, "#find" do
     context "when there is a requested record that does not exist on the external service" do
       
       before(:each) do
-        Morpheus::Configuration.hydra.stub(:get, "#{Morpheus::Configuration.host}/dogs?ids%5B%5D=1&ids%5B%5D=2&ids%5B%5D=3").and_return(build_morpheus_response(404, nil))
+        Morpheus::Configuration.hydra.stub(:get, "#{Morpheus::Configuration.host}/dogs?ids=1&ids=2&ids=3").and_return(build_morpheus_response(404, nil))
       end
       
       it "raises a ResourceNotFound error" do
@@ -115,7 +115,7 @@ describe Morpheus::Finders, "#find" do
     context "when there is a requested record that does not exist on the external service" do
       
       before(:each) do
-        Morpheus::Configuration.hydra.stub(:get, "#{Morpheus::Configuration.host}/dogs?ids%5B%5D=1&ids%5B%5D=2&ids%5B%5D=3").and_return(build_morpheus_response(404, nil))
+        Morpheus::Configuration.hydra.stub(:get, "#{Morpheus::Configuration.host}/dogs?ids=1&ids=2&ids=3").and_return(build_morpheus_response(404, nil))
       end
       
       it "raises a ResourceNotFound error" do
