@@ -25,27 +25,27 @@
     @dummy = Dummy.new(
       :name       => "Dumb",
       :has_smarts => false,
-      :thingy_id  => 2)                                # => #<Dummy:0x1016858d8>
-    @dummy.new_record?                                 # => true
-    @dummy.save                                        # => POST http://example.com/dummies
+      :thingy_id  => 2)     # => #<Dummy:0x1016858d8>
+    @dummy.new_record?      # => true
+    @dummy.save             # => POST http://example.com/dummies
     ```
 
 ## Finding existing resources
 * Resources can be retrieved with as little as their classname and unique identifier.
 
     ```Ruby
-    @dummy = Dummy.find(1)                             # => GET http:example.com/dummies/1
-    @dummy.new_record?                                 # => false
-    @dummy.name                                        # => "Dumb"
+    @dummy = Dummy.find(1) # => GET http:example.com/dummies/1
+    @dummy.new_record?     # => false
+    @dummy.name            # => "Dumb"
     ```
 
 ## Updating existing resources
 * Resources can be updated just in the same way you would expect from a Active* library.
 
     ```Ruby
-    @dummy.name = "Dumber"                             # => "Dumber"
-    @dummy.save                                        # => PUT http://example.com/dummies/1
-    @dummy.update_attributes(:has_smarts => true)      # => PUT http://example.com/dummies/1
+    @dummy.name = "Dumber"                        # => "Dumber"
+    @dummy.save                                   # => PUT http://example.com/dummies/1
+    @dummy.update_attributes(:has_smarts => true) # => PUT http://example.com/dummies/1
     ```
 
 ## Associations
@@ -53,9 +53,9 @@
 * Associations are a bit of that 'little more'.
 
     ```Ruby
-    @dummy.thingy                                      # => GET http://example.com/thingies/2
-    @dummy.thingamabobs                                # => GET http://example.com/dummies/1/thingamabobs
-    @dummy.doohickey                                   # => GET http://example.com/dummies/1/doohickey
+    @dummy.thingy       # => GET http://example.com/thingies/2
+    @dummy.thingamabobs # => GET http://example.com/dummies/1/thingamabobs
+    @dummy.doohickey    # => GET http://example.com/dummies/1/doohickey
     ```
 
 ## Query Interface
