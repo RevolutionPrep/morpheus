@@ -1,7 +1,6 @@
-# RESTful API Client
-Working toward a DSL that is very ActiveResource/ActiveRecord-like with some features stolen from other great libraries like DataMapper.
-
-For Example:
+# Morpheus
+## A RESTful API Client library built over Typhoeus
+* Working toward a DSL that is very ActiveResource/ActiveRecord-like with some features stolen from other great libraries like DataMapper.
 
     ```Ruby
     class Dummy < Morpheus::Base
