@@ -54,8 +54,8 @@
 
     ```Ruby
     @dummy.thingy       # => GET http://example.com/thingies/2
-    @dummy.thingamabobs # => GET http://example.com/dummies/1/thingamabobs
-    @dummy.doohickey    # => GET http://example.com/dummies/1/doohickey
+    @dummy.thingamabobs # => GET http://example.com/thingamabobs?dummy_id=1
+    @dummy.doohickey    # => GET http://example.com/doohickey?dummy_id=1
     ```
 
 ## Query Interface
