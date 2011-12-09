@@ -1,9 +1,10 @@
-= RESTful API Client
+# RESTful API Client
 Working toward a DSL that is very ActiveResource/ActiveRecord-like with some features stolen from other great libraries like DataMapper.
 
 For Example:
 
-    class Dummy < PolarisResource::Base
+    ```Ruby
+    class Dummy < Morpheus::Base
       property :name
       property :created_at
       property :has_smarts
@@ -12,7 +13,9 @@ For Example:
       has_many :thingamabobs
       has_one :doohickey
     end
+    ```
 
+    ```Ruby
     @dummy = Dummy.new(
       :name       => "Dumb",
       :has_smarts => false,
@@ -40,5 +43,6 @@ For Example:
     Dummy.limit(1)                                     # => GET http://localhost/dummies?limit=1
     Dummy.result_per_page = 25                         # => 25
     Dummy.page(3)                                      # => GET http://localhost/dummies?limit=25&offset=50
+    ```
 
-Design informed by Service-Oriented Design with Ruby and Rails by Paul Dix, @Amazon[http://www.amazon.com/Service-Oriented-Design-Rails-Addison-Wesley-Professional/dp/0321659368]
+Design informed by Service-Oriented Design with Ruby and Rails by Paul Dix, [Amazon](http://www.amazon.com/Service-Oriented-Design-Rails-Addison-Wesley-Professional/dp/0321659368)
