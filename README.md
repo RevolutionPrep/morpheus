@@ -15,6 +15,7 @@
     ```
 
 ## Creating new records
+
     ```Ruby
     @dummy = Dummy.new(
       :name       => "Dumb",
@@ -25,6 +26,7 @@
     ```
 
 ## Finding existing records
+
     ```Ruby
     @dummy = Dummy.find(1)                             # => GET http:localhost/dummies/1
     @dummy.new_record?                                 # => false
@@ -32,6 +34,7 @@
     ```
 
 ## Updating existing records
+
     ```Ruby
     @dummy.name = "Dumber"                             # => "Dumber"
     @dummy.save                                        # => PUT http://localhost/dummies/1
@@ -39,6 +42,7 @@
     ```
 
 ## Associations
+
     ```Ruby
     @dummy.thingy                                      # => GET http://localhost/thingies/2
     @dummy.thingamabobs                                # => GET http://localhost/dummies/1/thingamabobs
@@ -46,6 +50,7 @@
     ```
 
 ## Query Interface
+
     ```Ruby
     Dummy.all                                          # => GET http://localhost/dummies
     Dummy.find(1,2,3)                                  # => GET http://localhost/dummies?ids=1,2,3
