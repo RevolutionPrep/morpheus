@@ -23,7 +23,7 @@
 
     ```Ruby
     @dummy = Dummy.new(
-      :name       => "Dumb",
+      :name       => 'Dumb',
       :has_smarts => false,
       :thingy_id  => 2)     # => #<Dummy:0x1016858d8>
     @dummy.new_record?      # => true
@@ -36,14 +36,14 @@
     ```Ruby
     @dummy = Dummy.find(1) # => GET http:example.com/dummies/1
     @dummy.new_record?     # => false
-    @dummy.name            # => "Dumb"
+    @dummy.name            # => 'Dumb'
     ```
 
 ## Updating existing resources
 * Resources can be updated just in the same way you would expect from a Active* library.
 
     ```Ruby
-    @dummy.name = "Dumber"                        # => "Dumber"
+    @dummy.name = 'Dumber'                        # => 'Dumber'
     @dummy.save                                   # => PUT http://example.com/dummies/1
     @dummy.update_attributes(:has_smarts => true) # => PUT http://example.com/dummies/1
     ```
@@ -66,8 +66,8 @@
     Dummy.all                                          # => GET http://example.com/dummies
     Dummy.find(1,2,3)                                  # => GET http://example.com/dummies?ids=1,2,3
 
-    Dummy.where(:name => "Dumb")                       # => GET http://example.com/dummies?name=Dumb
-    Dummy.where(:name => "Dumb", :has_smarts => false) # => GET http://example.com/dummies?name=Dumb&has_smarts=false
+    Dummy.where(:name => 'Dumb')                       # => GET http://example.com/dummies?name=Dumb
+    Dummy.where(:name => 'Dumb', :has_smarts => false) # => GET http://example.com/dummies?name=Dumb&has_smarts=false
     Dummy.limit(1)                                     # => GET http://example.com/dummies?limit=1
     Dummy.result_per_page = 25                         # => 25
     Dummy.page(3)                                      # => GET http://example.com/dummies?limit=25&offset=50
