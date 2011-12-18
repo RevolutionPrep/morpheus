@@ -1,4 +1,4 @@
-shared_examples_for "ActiveModel" do
+shared_examples_for 'ActiveModel' do
   require 'test/unit/assertions'
   require 'active_model/lint'
   include Test::Unit::Assertions

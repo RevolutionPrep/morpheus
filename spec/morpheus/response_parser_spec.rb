@@ -1,16 +1,16 @@
 require 'spec_helper'
 
-describe Morpheus::Associations::HasOneAssociation do
+describe Morpheus::ResponseParser do
 
   describe '#initialize' do
     pending
   end
 
-  describe '#with_filter' do
+  describe '.parse' do
     pending
   end
 
-  describe '#load_target!' do
+  describe '#parse' do
     pending
   end
 

@@ -10,18 +10,15 @@ module Morpheus
 
     end
 
-    module InstanceMethods
-
-      def build_from_response(response)
-        content = Yajl::Parser.parse(response.body)['content']
-        if content.keys.include?('type')
-          content['type'].constantize.new.merge_attributes(content)
-        else
-          merge_attributes(content)
-        end
+    def build_from_response(response)
+      content = Yajl::Parser.parse(response.body)['content']
+      if content.keys.include?('type')
+        content['type'].constantize.new.merge_attributes(content)
+      else
+        merge_attributes(content)
       end
-      private :build_from_response
-
     end
+    private :build_from_response
+
   end
 end

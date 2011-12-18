@@ -14,7 +14,7 @@ module Morpheus
   # Occurs when the remote host is unreachable.
   class RemoteHostConnectionFailure < ::StandardError
   end
-  
+
   # Occurs when there is a server error resulting in a 500 response code
   class ServerError < ::StandardError
   end

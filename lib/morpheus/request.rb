@@ -7,7 +7,7 @@ module Morpheus
         options[:method] = :post
         options[:params].merge!(:_method => :put)
       end
-      
+
       options[:username] = Configuration.username if Configuration.username
       options[:password] = Configuration.password if Configuration.password
 

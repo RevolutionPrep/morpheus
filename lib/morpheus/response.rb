@@ -11,11 +11,11 @@ module Morpheus
         @cached = tagged_for_caching?
       end
     end
-    
+
     def tag_for_caching!
       @tagged_for_caching = true
     end
-    
+
     def tagged_for_caching?
       @tagged_for_caching ||= false
     end

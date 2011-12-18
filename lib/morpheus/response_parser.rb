@@ -10,8 +10,13 @@ module Morpheus
 
     def self.parse(owner, request, metadata)
       parser = new(owner, request, metadata)
-
-      ActiveSupport::Notifications.instrument('request.morpheus', :url => request.url, :params => request.params, :method => request.method, :class => owner, :response => request.response) do
+      ActiveSupport::Notifications.instrument('request.morpheus',
+        :url      => request.url,
+        :params   => request.params,
+        :method   => request.method,
+        :class    => owner,
+        :response => request.response
+      ) do
         @parsed_response = parser.parse
       end
       RequestCache.cache.clear unless request.method == :get
@@ -40,7 +45,7 @@ module Morpheus
     def content
       @content ||= Yajl::Parser.parse(@response.body).try(:[], 'content')
     end
-    
+
     def response_errors
       @response_errors ||= Yajl::Parser.parse(@response.body).try(:[], 'errors')
     end
@@ -56,7 +61,7 @@ module Morpheus
         end
       end
     end
-    
+
     def build_object_with_attributes(attributes)
       if attributes.keys.include?('type')
         attributes['type'].constantize.new(attributes)
