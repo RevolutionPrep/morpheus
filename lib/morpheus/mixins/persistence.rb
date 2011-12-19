@@ -1,6 +1,9 @@
 module Morpheus
   module Persistence
-    extend ActiveSupport::Concern
+
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
 
     def save(with_validations = true)
       attributes_for_save = { self.class.attributes_root => attributes_without_basic_attributes.reject { |k,v| v.nil? } }

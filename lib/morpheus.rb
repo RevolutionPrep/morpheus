@@ -59,8 +59,8 @@ end
 
 # The Railtie loads the LogSubscriber for printing output to the Rails log, and
 # Associations which plug-in to ActiveRecord to link associated resources.
-require 'morpheus/client/railtie' if defined?(Rails)
-require 'morpheus/client/inflections'
+require 'morpheus/client/railtie'     if defined?(Rails)
+require 'morpheus/client/inflections' if defined?(ActiveSupport)
 
 # There are some Typhoeus patches contained here.
 require 'ext/typhoeus'

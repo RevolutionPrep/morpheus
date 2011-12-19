@@ -5,7 +5,9 @@ module Morpheus
     autoload :HasManyAssociation,   'morpheus/associations/has_many_association'
     autoload :HasOneAssociation,    'morpheus/associations/has_one_association'
 
-    extend ActiveSupport::Concern
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
 
     module ClassMethods
 

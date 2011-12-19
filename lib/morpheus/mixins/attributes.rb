@@ -1,6 +1,9 @@
 module Morpheus
   module Attributes
-    extend ActiveSupport::Concern
+
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
 
     module ClassMethods
 
