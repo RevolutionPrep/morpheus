@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Morpheus::Configuration do
+
   describe '.host' do
     context 'when host has not been set' do
       before(:each) do
@@ -110,4 +111,5 @@ describe Morpheus::Configuration do
       end
     end
   end
+
 end
