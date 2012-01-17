@@ -1,3 +1,3 @@
 module Morpheus
-  VERSION = '0.3.7.alpha'
+  VERSION = '0.3.7'
 end
